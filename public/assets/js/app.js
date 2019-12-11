@@ -2,19 +2,22 @@
 $(function() {
     $(".change-Eaten").on("click", function(event) {
       var id = $(this).data("id");
-      var newEaten = $(this).data("newEaten");
+      var newEaten = $(this).data("newEaten") === false;
   
       var newEatenState = {
-        Eaten: newEaten
+        devour: newEaten
       };
+
+      console.log(`id: ${id}
+eaten: ${newEatenState.devour}`);
   
-      // Send the PUT request.
-      $.ajax("/api/burger/" + id, {
+      // Send the PUT request. // WHERE IS MY ERROR
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newEatenState
-      }).then(
+          }).then(
         function() {
-          console.log("changed Eaten to", newEaten;
+          console.log("changed Eaten to", newEaten);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -27,8 +30,9 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        Eaten: $("[name=Eaten]:checked").val().trim()
       };
+
+      console.log(newBurger);
   
       // Send the POST request.
       $.ajax("/api/burger", {
