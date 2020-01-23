@@ -13,7 +13,7 @@ eaten: ${newEatenState.devour}`);
   
       // Send the PUT request. // WHERE IS MY ERROR
       $.ajax("/api/burgers/" + id, {
-        type: "PUT",
+        method: "POST",
         data: newEatenState
           }).then(
         function() {
@@ -35,7 +35,7 @@ eaten: ${newEatenState.devour}`);
       console.log(newBurger);
   
       // Send the POST request.
-      $.ajax("/api/burger", {
+      $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
       }).then(
