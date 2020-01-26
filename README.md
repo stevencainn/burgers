@@ -19,3 +19,7 @@ Using the Sequelize ORM, the app has 3 basic CRUD functions:
 6. Mysql
 7. Heroku
 
+### DEMO:
+
+![Screen Recording 2020-01-26 at 12 51 35 PM](https://user-images.githubusercontent.com/53619333/73139435-ebb55880-403b-11ea-83d5-6c7d082d5651.gif)
+
